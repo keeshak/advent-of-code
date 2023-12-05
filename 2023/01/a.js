@@ -6,21 +6,19 @@ const getInput = () => {
 
     return input.toString();
   } catch(e) {
-    console.log(e.stack);
+    console.log(e);
   }
 }
 
 const parseInput = (input) => {
-  let sum = 0;
+  let output = 0;
 
-  input.split('\n').map((line) => {
+  input.split('\n').map(line => {
     let digits = line.match(/[0-9]/g) || [];
     let newDigit = Number(digits[0] + '' + digits.at(-1));
 
-    sum += newDigit;
-
-    console.log(line, newDigit, sum);
+    console.log(line, newDigit, output += newDigit);
   });
 }
 
-parseInput(getInput());
+parseInput(getInput()); // 55386

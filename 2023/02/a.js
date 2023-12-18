@@ -36,10 +36,10 @@ const parseInput = (input) => {
     });
 
     if (gameIsValid) {
-      output += gameId;
+      console.log(gameId, true, output += gameId);
+    } else {
+      console.log(gameId, false, output);
     }
-
-    console.log(gameId, gameIsValid, output);
   });
 };
 
